@@ -29,40 +29,6 @@
   margin-bottom: 10px;
   background-color: #fff;
 }
-.mm_content .info .item {
-  padding: 10px 5px;
-  border-bottom: 1px solid #ccc;
-}
-.mm_content .info .item a {
-  display: block;
-}
-.mm_content .info .item div.left {
-  width: 100px;
-}
-.mm_content .info .item div.right {
-  padding-left: 20px;
-  overflow: hidden;
-  height: 100px;
-  position: relative;
-}
-.mm_content .info .item div.right .desc span.price {
-  color: #ff6c00;
-}
-.mm_content .info .item div.right .bottom {
-  width: 100%;
-  position: absolute;
-  bottom: 15px;
-  left: 20px;
-  font-size: 12px;
-  color: #666;
-}
-.mm_content .info .item div.right .bottom span.right {
-  position: absolute;
-  right: 25px;
-}
-.mm_content .info .item div.right .bottom span.right i {
-  margin-right: 2px;
-}
 .mm_content .more {
   padding: 0 10px;
   padding-top: 10px;

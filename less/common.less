@@ -151,4 +151,44 @@ html, body {
   .hide{
     display: none;
   }
+    // 信息
+    .info{
+      .item{
+        padding: 10px 5px;
+        border-bottom: 1px solid #ccc;
+        a{
+          display:block;
+        }
+        div.left{
+          width: 100px;
+        }
+        div.right{
+          padding-left: 20px;
+          overflow: hidden;
+          height: 100px;
+          position: relative;
+          .desc{
+            span.price{
+              color: #ff6c00;
+
+            }
+          }
+          .bottom{
+            width: 100%;
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+            font-size: 12px;
+            color: #666;
+            span.right{
+              position: absolute;
+              right: 25px;
+              i{
+                margin-right: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
 }

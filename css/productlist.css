@@ -1,0 +1,70 @@
+.mm_productlist {
+  background-color: #fff;
+}
+.mm_productlist .mm_content .title {
+  height: 40px;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #ccc;
+  background-image: linear-gradient(to bottom, #ffffff 0, #ededed 100%);
+}
+.mm_productlist .mm_content .title span {
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  padding: 0 15px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 2px 2px 2px #666;
+  margin-top: 3px;
+}
+.mm_productlist .mm_content .info .price {
+  color: #ea3900;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.mm_productlist .mm_content .info .bottom {
+  color: #f1f1f1;
+}
+.mm_productlist .mm_content .info .bottom .comm {
+  margin-left: 5px;
+}
+.mm_productlist .mm_content .pagination {
+  height: 46px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+.mm_productlist .mm_content .pagination div {
+  padding: 0 20px;
+  line-height: 35px;
+  height: 35px;
+}
+.mm_productlist .mm_content .pagination div.btn {
+  background-image: linear-gradient(to bottom, #f1f1f1 0, #cccccc 100%);
+  border-radius: 5px;
+}
+.mm_productlist .mm_content .pagination div.dropdown {
+  padding-right: 32px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.mm_productlist .mm_content .pagination div.dropdown ul {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border: 1px solid #ff20007d;
+  text-align: center;
+}
+.mm_productlist .mm_content .pagination div.dropdown ul li {
+  height: 35px;
+  line-height: 35px;
+  background-color: #fff;
+}
+.mm_productlist .mm_content .pagination div.dropdown ul li.current {
+  background-color: skyblue;
+}
+.mm_productlist .mm_content .pagination div.dropdown i {
+  position: absolute;
+  right: 8px;
+  top: 32%;
+}

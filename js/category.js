@@ -31,7 +31,7 @@ $(function(){
                     $('.cate_main .item ul').html(htmlStr);
                 }
             }) 
-          $(this).siblings().slideToggle();
+          $(this).siblings().stop().slideToggle();
         })
     }
 

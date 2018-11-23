@@ -347,3 +347,37 @@ body {
 .container .hide {
   display: none;
 }
+.container .info .item {
+  padding: 10px 5px;
+  border-bottom: 1px solid #ccc;
+}
+.container .info .item a {
+  display: block;
+}
+.container .info .item div.left {
+  width: 100px;
+}
+.container .info .item div.right {
+  padding-left: 20px;
+  overflow: hidden;
+  height: 100px;
+  position: relative;
+}
+.container .info .item div.right .desc span.price {
+  color: #ff6c00;
+}
+.container .info .item div.right .bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 12px;
+  color: #666;
+}
+.container .info .item div.right .bottom span.right {
+  position: absolute;
+  right: 25px;
+}
+.container .info .item div.right .bottom span.right i {
+  margin-right: 2px;
+}
