@@ -239,6 +239,8 @@ body {
   height: 50px;
   background-color: #ff841d;
   position: relative;
+  text-align: center;
+  line-height: 50px;
 }
 .container .mm_head a {
   display: block;
@@ -259,6 +261,17 @@ body {
 .container .mm_head a.app img {
   width: 34px;
   margin-top: 8px;
+}
+.container .mm_head h3 {
+  color: #fff;
+  font-size: 20px;
+}
+.container .mm_head .goback {
+  width: 44px;
+}
+.container .mm_head .goback i {
+  font-size: 40px;
+  color: #f1f1f1;
 }
 .container .mm_search {
   height: 50px;

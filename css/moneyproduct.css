@@ -1,0 +1,53 @@
+.content {
+  padding: 0 10px;
+  background-color: #fff;
+}
+.content .top {
+  padding: 20px 0;
+  color: #5a5a5a;
+}
+.content .info {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.content .text {
+  line-height: 25px;
+  font-size: 16px;
+}
+.content img.small {
+  width: 120px;
+  height: 120px;
+}
+.content img.big {
+  width: auto;
+}
+.content .city ul {
+  width: 140px;
+  margin: 0 auto;
+  box-shadow: 2px 0px 10px #cccccce3;
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: #fff;
+}
+.content .city ul li {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px dashed #ccc;
+}
+.content .city ul li span.fr {
+  color: orange;
+}
+.content .gobuy {
+  padding: 0 10px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  height: 30px;
+  background-color: #FF9000;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
+}
+.content .gobuy a {
+  display: block;
+  color: #fff;
+}

@@ -30,10 +30,10 @@ $(function(){
             console.log( info );
             var htmlStr = template('infoTmp',info);
             $('.mm_content .info').html( htmlStr );      
-        }
-        
+        }  
     })
 
+    // 点击折扣区域单个商品,跳转到商品详情页
 
     
 });
