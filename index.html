@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<link rel="stylesheet" href="./lib/mui/css/mui.min.css">-->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>慢慢买首页</title>
+</head>
+<body>
+<div class="container">
+    <!--头部-->
+    <div class="mm_head">
+        <a href="#" class="logo"><img src="./images/header_logo.png" alt=""></a>
+        <a href="#" class="app"><img src="./images/header_app.png" alt=""></a>
+    </div>
+    <!--搜索框-->
+    <div class="mm_search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button class="btn-search">搜索</button>
+    </div>
+    <!--导航-->
+    <div class="mm_nav">
+        <ul class="clearfix">
+            <!--<li><a href="#"><img src="./images/ic_search.png" alt="">-->
+            <!--<p>比价搜索</p></a></li>-->
+            <!--挖个坑-->
+        </ul>
+    </div>
+    <!--超值推荐-->
+    <div class="mm_content">
+        <div class="title clearfix">
+            <h3 class="fl">超值折扣推荐</h3>
+            <i class="fa fa-chevron-circle-right fr"></i>
+        </div>
+        <div class="info">
+           <!-- 挖个坑 -->
+           <div class="item">
+            <a href="#" class="clearfix">
+                <div class="left fl">
+                    <img src="./images/ic_pp.png" alt="">
+                </div>
+                <div class="right ">
+                    <p class="desc">移动端凑单品：海天 鲜味 生抽 1.28L <span class="price">10.9元</span></p>
+                    <p class="bottom">
+                        <span>京东商城 | 10-25 14:10</span>
+                        <span class="right"><i class="fa fa-commenting-o"></i>1</span>
+                    </p>
+                </div>
+            </a>
+        </div>
+        </div>
+        <!-- 更多优惠 -->
+        <div class="more">
+            <a href="#">更多优惠信息 <i class="fa fa-angle-double-right"></i></a>
+        </div>
+    </div>
+    <!-- 品牌排序 -->
+    <div class="sort">
+        <div class="title clearfix">
+            <h3 class="fl">品牌排行</h3>
+            <i class="fa fa-chevron-circle-right fr"></i>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="mm_footer">
+        <div class="top clearfix">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#"><i class="fa fa-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p class="download">
+                <a href="#" class="app">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                <span class="gray"> -- 掌上比价平台</span>
+            </p>
+            <p class="gray">m.manmanbuy.com</p></div>
+    </div>
+</div>
+<!--准备nav部分模板-->
+<script type="text/html" id="navTmp">
+    {{each result v i }}
+    {{if i<8}}
+    <li>
+        <a href="{{v.titlehref}}">
+            {{@v.img}}
+            <p>{{v.name}}</p>
+        </a>
+    </li>
+    {{else}}
+    <li class="hide">
+        <a href="{{v.titlehref}}">
+            {{@v.img}}
+            <p>{{v.name}}</p>
+        </a>
+    </li>
+    {{/if}}
+    {{ /each}}
+</script>
+
+<!-- 超值推荐部分的模板 -->
+<script type="text/html" id="infoTmp">
+{{each result vi}}
+<div class="item">
+    <a href="#" class="clearfix">
+        <div class="left fl">
+            <img src="./images/ic_pp.png" alt="">
+        </div>
+        <div class="right ">
+            <p class="desc">移动端凑单品：海天 鲜味 生抽 1.28L <span class="price">10.9元</span></p>
+            <p class="bottom">
+                <span>京东商城 | 10-25 14:10</span>
+                <span class="right"><i class="fa fa-commenting-o"></i>1</span>
+            </p>
+        </div>
+    </a>
+</div>
+
+{{/each}}
+</script>
+
+
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<!--<script src="./lib/mui/js/mui.js"></script>-->
+<script src="./js/index.js"></script>
+</body>
+</html>
