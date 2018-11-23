@@ -381,3 +381,17 @@ body {
 .container .info .item div.right .bottom span.right i {
   margin-right: 2px;
 }
+.container .more {
+  padding: 0 10px;
+  padding-top: 10px;
+}
+.container .more a {
+  width: 100%;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #fbfbfb;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

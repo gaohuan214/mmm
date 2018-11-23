@@ -1,90 +1,131 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--<link rel="stylesheet" href="./lib/mui/css/mui.min.css">-->
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/category.css">
-
-    <title>慢慢买首页</title>
+    <link rel="stylesheet" href="./css/bijia.css">
+    <title>商品列表</title>
 </head>
+
 <body>
-<div class="container">
-    <!--头部-->
-    <div class="mm_head">
-        <a href="index.html" class="logo"><img src="./images/header_logo.png" alt=""></a>
-        <a href="#" class="app"><img src="./images/header_app.png" alt=""></a>
-    </div>
-    <!--搜索框-->
-    <div class="mm_search">
-        <input type="text" placeholder="请输入你想比价的商品">
-        <button class="btn-search">搜索</button>
-    </div>
-    <!-- 分类的主体部分 -->
-   <div class="cate_main">
-       <ul class="lists">
-           <li class="item">
-               <a href="#">
-                   <span>大家电</span>
-                   <i class="fa fa-angle-down"></i>
-                </a>
-                <ul class="clearfix hide">
-                    <li><a href="#">电视</a></li>
-                    <li><a href="#">电视</a></li>
-                    <li><a href="#">电视</a></li>
-                    <li><a href="#">电视</a></li>
-                </ul>
-            </li>
-          
-       </ul>
-   </div>
-    <!-- 底部 -->
-    <div class="mm_footer">
-        <div class="top clearfix">
-            <a href="javascript:;">登录</a>
-            <a href="javascript:;">注册</a>
-            <a href="#"><i class="fa fa-arrow-up"></i>返回顶部</a>
+    <div class="container">
+        <!--头部-->
+        <div class="mm_head">
+            <a href="index.html" class="logo">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+            <a href="#" class="app">
+                <img src="./images/header_app.png" alt="">
+            </a>
         </div>
-        <div class="bottom">
-            <p class="download">
-                <a href="#" class="app">手机APP下载</a>
-                <a href="#">慢慢买手机版</a>
-                <span class="gray"> -- 掌上比价平台</span>
-            </p>
-            <p class="gray">m.manmanbuy.com</p></div>
+        <!--搜索框-->
+        <div class="mm_search">
+            <input type="text" placeholder="请输入你想比价的商品">
+            <button class="btn-search">搜索</button>
+        </div>
+        <!--主体部分  -->
+        <div class="main">
+            <div class="title">
+                    <a href="index.html">首页</a>
+                    >
+                    <a href="category.html">全部分类</a>
+                    >              
+                    <a href="#" class="proName">电视</a>
+                    <span class="fr">筛选</span>
+            </div>
+            <!-- 产品相关 -->
+            <div class="content">
+                <!-- 描述 -->
+                <div class="desc clearfix"></div>
+                <!-- 参数部分 -->
+                <div class="param">
+                    <ul class="clearfix">
+                        <li class="active">比价购买</li>
+                        <li>产品参数</li>
+                        <li>评价（2322）</li>
+                    </ul>
+                </div>
+                <!-- 去购买 -->
+                <div class="goshop">
+                    <!-- 挖个坑 -->
+
+                </div>
+                <div class="tips">                  
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。           
+                </div>
+            </div>
+            <!-- 评论区域 -->
+            <div class="comm">
+                <h3>网页评价</h3>
+                <ul>
+                  <!-- 挖个坑 -->
+                </ul>
+                 <!-- 更多 -->
+             <div class="more">
+                <a href="javaScript:;">查看更多评价</i></a>
+            </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="mm_footer">
+            <div class="top clearfix">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="#">
+                    <i class="fa fa-arrow-up"></i>返回顶部</a>
+            </div>
+            <div class="bottom">
+                <p class="download">
+                    <a href="#" class="app">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    <span class="gray"> -- 掌上比价平台</span>
+                </p>
+                <p class="gray">m.manmanbuy.com</p>
+            </div>
+        </div>
     </div>
-</div>
 
-<!-- 准备分类页标题模板 -->
-<script type="text/html" id="cateTitleTmp">
-    <ul class="lists">
-            {{each result v i}}
-        <li class="item">
-            <a href="#"  data-id="{{v.titleId}}">
-                <span>{{v.title}}</span>
-                <i class="fa fa-angle-down"></i>
-             </a>
-            <ul class="clearfix hide">
-            </ul>          
-         </li>     
+    <!-- 准备产品详情部分模板 -->
+    <script type="text/html" id="detailTmp">
+        {{each result v i}}
+        <h3>{{v.productName}}</h3>
+            {{@v.productImg}}
          {{/each}}
-    </ul>
-</script>
-
-<script type="text/html" id="listTmp">
-
-    {{each result v i}}
-    <li><a href="productlist.html?categoryId={{v.categoryId}}" data-id="{{v.categoryId}}">{{v.category}}</a></li>
+         <div class="collect fr">收藏</div>    
+    </script>
+    <!-- 准备去购买部分模板 -->
+    <script type="text/html" id="goshopTmp">
+        {{each result v i}}
+            {{@v.bjShop}}
+        {{/each}}
+    </script>
+    
+   <!-- 准备评价主体部分的模板 -->
+   <script type="text/html" id="commonTmp">
+    {{each result v  i}}
+    <li>
+        <div class="top clearfix">
+            <p class="clearfix">   
+                <span class="fl">{{v.comName}}</span>
+                    <span class="fr">{{v.comTime}}</span>
+            </p>                       
+            <p class="form fr">{{v.comFrom}}</p>
+        </div>
+        <div class="bottom">                            
+            {{v.comContent}}    
+        </div>
+    </li>
     {{/each}}
-
-</script>
-<script src="./lib/artTemplate/template-web.js"></script>
-<script src="./lib/jquery/jquery.min.js"></script>
-<!--<script src="./lib/mui/js/mui.js"></script>-->
-<script src="./js/category.js"></script>
+   </script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/bijia.js"></script>
 </body>
+
 </html>
