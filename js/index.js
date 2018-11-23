@@ -16,8 +16,8 @@ $(function(){
                                 // 属性选择器
       $('.mm_nav').on('click','img[alt="更多"]',function(e){
         e.preventDefault();
-        // 用切换类的方法
-        $('.mm_nav li:nth-child(n+9)').toggleClass('hide');
+        // 第九个li后加缓动效果
+        $('.mm_nav li:nth-child(n+9)').slideToggle();
    });
 
 
@@ -29,7 +29,7 @@ $(function(){
         success: function(info){
             console.log( info );
             var htmlStr = template('infoTmp',info);
-            $('.mm_content ,info').html( htmlStr )      
+            $('.mm_content .info').html( htmlStr );      
         }
         
     })
