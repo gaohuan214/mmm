@@ -13,7 +13,7 @@ html, body {
   max-width: 750px;
   min-width: 375px;
   margin: 0 auto;
-  // background-color: #efefef;
+  background-color: #fff;
 
   //头部
   .mm_head {
@@ -219,4 +219,59 @@ html, body {
         border-radius: 5px;
       }
     }
+
+
+    // 分页(felx布局)
+    .pagination{
+      height: 46px;
+      padding-top: 5px;
+      display: flex;
+      justify-content: space-around;
+      div{
+          padding: 0 20px; 
+          line-height: 35px; 
+          height: 35px;  
+          &.btn{
+              background-image: linear-gradient(to bottom, #f1f1f1 0, #ccc 100%);
+              border-radius: 5px;
+              
+          }
+          &.dropdown{
+              padding-right: 32px;
+              border: 1px solid #ccc;
+              position: relative;
+              ul{
+                  position: absolute;
+                  width: 100%;
+                  left: 0;
+                  border: 1px solid #ff20007d;
+                  text-align: center;
+                  li{
+                      height: 35px;
+                      line-height: 35px;
+                      background-color: #fff;
+                      &.current{
+                          background-color: skyblue;
+                      }
+                  }
+                  &.up{
+                    left: 0;
+                    bottom: 34px;
+                  }
+              }
+              i{
+                  position: absolute;
+                  right: 8px;
+                  top: 32%;
+              }
+          }
+      }
+  }
+
+    //超值折扣
+    .mm_content{
+      margin-top: 5px;
+      margin-bottom: 10px;
+      background-color: #fff;
+    };
 }

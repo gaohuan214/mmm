@@ -2,56 +2,40 @@
 // 渲染页面
 
 
-var categoryid = getSearch('categoryId') || 0;
-    // 请求头部信息
-    $.ajax({
-        type: 'get',
-        url: 'http://127.0.0.1:9090/api/getcategorybyid',
-        data:{
-            categoryid: categoryid,
-        },
-        dataType: 'json',
-        success: function( info ){
-            // console.log(info);
-            var htmlStr = template('listTitleTmp',info);
-            $('.mm_productlist .title').html( htmlStr )           
-        }
+var pageid = 0;
 
-    })
 
- renderByPage(1);
+ renderByPage( 0 );
 //封装渲染信息部分
-//声明一个变量存储当前页码
-var pageid;
  function renderByPage( pageid ){
     //列表信息部分
     $.ajax({
         type: 'get',
-        url: 'http://127.0.0.1:9090/api/getproductlist',
+        url: 'http://127.0.0.1:9090/api/getmoneyctrl',
         data: {
-            categoryid: categoryid,
-            pageid : pageid || 1,
+            pageid : pageid,
         },
         dataType: 'json',
-        success: function(info){
-            console.log(info );
-            var htmlStr = template('listTmp' ,info);
-            $('.mm_productlist .info').html( htmlStr ); 
+        success: function(info){ 
+            console.log(info);
+                  
+            var htmlStr = template('infoTmp' ,info);
+            $('.mm_content .info').html( htmlStr ); 
 
             /* -----分页部分------*/
             //获取总页数
-            var total = Math.ceil( $('.mm_productlist .info .item').data('total')/$('.mm_productlist .info .item').data('pagesize'));
-            // console.log(total);
+            var total = Math.ceil( info.totalCount/info.pagesize);
+            console.log(total);
             
             // 动态添加下拉数据,判断total部分,为NaN,页面显示器
             var str = ""
             if(total){   
                 for(i=1; i <= total;i++){
                     if(i==1){
-                        str += ' <li class="current">'+i+'/'+total+'</li>';
+                        str += ' <li class="current"><a href="#">'+i+'/'+total+'</a></li>';
                        
                     }else{
-                        str +=' <li>'+i+'/'+total+'</li>';
+                        str +=' <li><a href="#">'+i+'/'+total+'</a></li>';
                     }                  
                 }
             // 将总页码动态设置给显示的页面区域
@@ -66,16 +50,16 @@ var pageid;
 
             // 点击下一页,重新渲染下一页
             $('.btn-next').click(function(){
-                if(pageid>=total){
+                if(pageid>=total-1){
                     return;
                 }
                 pageid ++;                 
-                 renderByPage(pageid);          
+                    renderByPage(pageid);          
             })
 
             // 点击上一页,重新渲染上一页
             $('.btn-prev').click(function(){
-                if(pageid <= 1 ){
+                if(pageid <= 0 ){
                     return;
                 }
                 pageid --;                  
@@ -83,8 +67,9 @@ var pageid;
             })
 
              // 动态设置页码
-             if(total){
-                 $('.pagination .page').text( pageid+'/'+total);    
+             if(total){   
+                             
+                 $('.pagination .page').text( (pageid+1)+'/'+total);    
              }else{
                 $('.pagination .page').text(" "); 
              }                
@@ -97,14 +82,13 @@ $('.pagination .page').click(function(){
     //点击下拉列表中每一项,动态赋值给页面显示区域,隐藏下拉框
     $('.pagination .dropdown ul').on('click','li',function(){
         var txt = $('this').text();
-        var index = $(this).index() +1 ;
+        var index = $(this).index();
+        //同步页码
+        pageid = index;
         renderByPage( index );
         // console.log(index);
         $('.pagination .page').text(txt);
-        $('.pagination .dropdown ul').hide();
-
-        //同步页码
-        pageid = index;
+        $('.pagination .dropdown ul').hide(); 
     })
     })
 

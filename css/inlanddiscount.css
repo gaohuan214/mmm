@@ -1,0 +1,38 @@
+.mm_main {
+  padding-bottom: 40px;
+  background-color: #fff;
+}
+.mm_main ul li {
+  padding: 10px;
+  float: left;
+  width: 50%;
+  border-bottom: 1px solid #eee;
+}
+.mm_main ul li:nth-child(2n+1) {
+  border-right: 1px solid #eee;
+}
+.mm_main ul li a {
+  display: block;
+}
+.mm_main ul li a img {
+  height: 100px;
+  width: auto;
+  margin: 0 auto;
+}
+.mm_main ul li a .name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 36px;
+}
+.mm_main ul li a .price {
+  color: #ff6c00;
+  margin-bottom: 10px;
+}
+.mm_main ul li a .info {
+  font-size: 12px;
+}
+.container .mm_footer {
+  margin: 0;
+}

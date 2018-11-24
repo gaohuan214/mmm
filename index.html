@@ -95,7 +95,7 @@
 <script type="text/html" id="infoTmp">
 {{each result v i}}
 <div class="item">
-    <a href="#" class="clearfix" data-id="{{v.productId}}">
+    <a href="moneyproduct.html?productId={{v.productId}}" class="clearfix" data-id="{{v.productId}}">
         <div class="left fl">
            {{@v.productImgSm}}
         </div>
@@ -103,7 +103,14 @@
             <p class="desc">{{v.productName}} <span class="price">{{v.productPinkage}}</span></p>
             <p class="bottom">
                 <span>{{v.productFrom}} | {{v.productTime}}</span>            
-                <span class="right"><i class="fa fa-commenting-o"></i><%= v.productComCount.match(/\d+/g).join() %></span>
+                <span class="right">
+                    <i class="fa fa-commenting-o"></i>
+                    {{if(v.productComCount === "")}}
+                    0
+                    {{else}}
+                     <%= v.productComCount.match(/\d+/g).join() %>
+                    {{/if}}
+                </span>
             </p>
         </div>
     </a>

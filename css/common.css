@@ -234,6 +234,7 @@ body {
   max-width: 750px;
   min-width: 375px;
   margin: 0 auto;
+  background-color: #fff;
 }
 .container .mm_head {
   height: 50px;
@@ -407,4 +408,53 @@ body {
   background-color: #fbfbfb;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+.container .pagination {
+  height: 46px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+.container .pagination div {
+  padding: 0 20px;
+  line-height: 35px;
+  height: 35px;
+}
+.container .pagination div.btn {
+  background-image: linear-gradient(to bottom, #f1f1f1 0, #cccccc 100%);
+  border-radius: 5px;
+}
+.container .pagination div.dropdown {
+  padding-right: 32px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.container .pagination div.dropdown ul {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border: 1px solid #ff20007d;
+  text-align: center;
+}
+.container .pagination div.dropdown ul li {
+  height: 35px;
+  line-height: 35px;
+  background-color: #fff;
+}
+.container .pagination div.dropdown ul li.current {
+  background-color: skyblue;
+}
+.container .pagination div.dropdown ul.up {
+  left: 0;
+  bottom: 34px;
+}
+.container .pagination div.dropdown i {
+  position: absolute;
+  right: 8px;
+  top: 32%;
+}
+.container .mm_content {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: #fff;
 }

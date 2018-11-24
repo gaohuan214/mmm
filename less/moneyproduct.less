@@ -1,5 +1,5 @@
 
-
+//国内折扣详情页主体部分
 .content{
     padding: 0 10px;
     background-color: #fff;
@@ -15,18 +15,16 @@
     .text{
         line-height: 25px;
         font-size: 16px;
+        img{
+            width: 120px;
+            height: 120px;
+            float: right;
+        }
+
     }
     //重置图片
     img{
-
-        &.small{
-            width: 120px;
-            height: 120px;
-        }
-        &.big{
-            // 设置auto可以去掉base文件中img图片width:100%
-           width: auto;
-        }
+         width: auto;
     }
     .city{
        ul{
@@ -40,7 +38,13 @@
            height: 30px;
            line-height: 30px;
            border-bottom: 1px dashed #ccc;
-           span.fr{
+           span{
+               display: block;
+               width: 100%;
+               overflow: hidden;
+           }
+           strong{
+               float: right;
                color: orange;
            }
          }
@@ -62,5 +66,105 @@
              color: #fff;         
         }
     }
+    img.weixin{
+        width: 100%;
+    }
+    // 评论区
+   .comment{
+    margin-top:20px;
+    .tit{
+        font-size: 16px;
+        height: 30px;
+        line-height: 30px;
+    }
+    //发表评论
+    .reply{
+        position: relative;
+        margin-bottom: 10px;
+        // 文本域
+        #ctl00_ContentBody_txt_nr{
+            padding: 10px 5px;            
+            width: 100%;
+            height: 120px;
+            font-size: 14px;
+            color: #666;
+            font-weight: normal;
+            border: 2px solid rgb(226, 226, 226);
+        }
+        //按钮
+        #ctl00_ContentBody_Button1{
+            width: 100px;
+            height: 40px;
+            background-color: #ff841d;
+            border:none;
+            position: absolute;
+            right: 2px;
+            bottom: 7px;
+            color: #fff;
+        }
+    }
+    // 评论列表
+   
+    .list{
+        padding-top: 20px;
+        padding-bottom: 30px;
+        li{
+            overflow: hidden;
+            margin-bottom: 20px;
 
+            .userimg{
+                float: left;
+                img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }              
+            }
+
+            .con{
+                padding-left: 10px;
+                overflow: hidden;
+                font-size: 12px;  
+                 
+                .name {
+                    .username{
+                        float: left;
+                        color: skyblue;
+                    }
+                    .time{
+                        float: right;
+                        color: #666;
+                    }
+                };
+
+                .content{
+                    padding: 10px 0;
+                    font-size: 14px;
+                    color: #666;
+
+                    .yinyong{
+                        border: 1px solid #f1f1f1;
+                        border-radius: 5px;
+                        background-color: #fbfbfb;
+                        padding: 10px;
+                        padding-top: 30px;
+                        .yinyong{
+
+                            padding-top: 10px;
+                        }
+                    }
+                }  
+               
+            };
+        }
+    }
+
+
+
+   }
+}
+
+// 重置尾部
+.container .mm_footer{
+    margin: 0;
 }

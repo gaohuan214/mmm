@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<link rel="stylesheet" href="./lib/mui/css/mui.min.css">-->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/inlanddiscount.css">
+    <title>折扣详情页</title>
+</head>
+<body>
+<div class="container">
+    <!--头部-->
+    <div class="mm_head">
+        <a href="javascript: history.back()" class="goback"><i class="fa fa-angle-left"></i></a>
+        <h3>国内折扣</h3>
+        <a href="#" class="app"><img src="./images/header_app.png" alt=""></a>
+    </div>
+    <div class="mm_main">
+        <ul class="clearfix">
+            
+            <li>
+                <a href="#">
+                    <img src="./images/ic_bcj.png" alt="">
+                    <p class="name">西域美农新疆特产五星和田红枣250g*2</p>
+                    <div class="price">
+                      19.8元(5件99元)
+                    </div>
+                    <div class="info">
+                            京东商城 | 10-22 13:28
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/ic_bcj.png" alt="">
+                    <p class="name">西域美农新疆特产五星和田红枣250g*2</p>
+                    <div class="price">
+                      19.8元(5件99元)
+                    </div>
+                    <div class="info">
+                            京东商城 | 10-22 13:28
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+ 
+    <!-- 底部 -->
+    <div class="mm_footer">
+        <div class="top clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#"><i class="fa fa-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p class="download">
+                <a href="#" class="app">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                <span class="gray"> -- 掌上比价平台</span>
+            </p>
+            <p class="gray">m.manmanbuy.com</p></div>
+    </div>
+</div>
+<script type="text/html" id="discountTmp">
+   {{each result v i}}
+        <li>
+            <a href="discount.html?productid={{v.productId}}">
+                {{@v.productImg}}
+                <p class="name">{{v.productName}}*2</p>
+                <div class="price">
+                    {{v.productPrice}}
+                </div>
+                <div class="info gray">
+                        {{v.productFrom}} | {{v.productTime}}
+                </div>
+            </a>
+        </li>
+   {{/each}}
+    
+</script>
+
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/inlanddiscount.js"></script>
+
+</body>
+</html>

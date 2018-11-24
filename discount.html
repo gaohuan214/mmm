@@ -50,17 +50,18 @@
     <span class="gray">{{v.productTime}}</span>
    <span>{{v.productTips}}</span>
 </p>
-<p class="text">
-{{@v.productImgSm}}            
-{{v.productInfo2}}
+<p class="text gary">
+{{@v.productImg}}            
+{{v.productInfo}}
 </p>
-<p>
-{{v.productInfo1}}
-</p>
-{{@v.productImg2}}
+
+{{@v.productImg}}
 {{/each}}
 <div class="city">
+    <!-- //判断是否有productCity -->
+    {{if(result[0].productCity) }}
     {{@result[0].productCity}}
+    {{/if}}
 </div> 
 <div class="gobuy">
     <a href="JavaScript:;">前往购买</a>
@@ -76,7 +77,7 @@
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/moneyproduct.js"></script>
+<script src="./js/discount.js"></script>
 
 </body>
 </html>
