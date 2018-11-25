@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/couponproduct.css">
+    <title>优惠券</title>
+</head>
+<body>
+<div class="container">
+    <!--头部-->
+    <div class="mm_head">
+        <a href="javascript: history.back()" class="goback"><i class="fa fa-angle-left"></i></a>
+        <h3> 优惠券</h3>
+        <a href="#" class="app"><img src="./images/header_app.png" alt=""></a>
+    </div>
+
+    <div class="mm_main">
+        <div class="tips gray">
+            --点餐前出示手机中的优惠券，即可享受优惠--
+        </div>
+        <ul>
+          <!--挖个坑-->
+        </ul>
+    </div>
+
+    <div class="mm_footer">
+        <div class="top clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#"><i class="fa fa-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p class="download">
+                <a href="#" class="app">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                <span class="gray"> -- 掌上比价平台</span>
+            </p>
+            <p class="gray">m.manmanbuy.com</p>
+        </div>
+    </div>
+
+    <!-- 回顶部的小图标 -->
+    <a href="#" class="toTop hide"><i class="fa fa-long-arrow-up"></i></a>
+</div>
+
+
+<!--模态框-->
+<div class="imgmodal hide">
+    <div class="content">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- 轮播图片 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                  <!--坑-->
+                </div>
+            </div>
+
+            <!-- 控制器(左右箭头)
+                 data-slide="prev"  点击按钮, 切换到上一张
+                 data-slide="next"  点击按钮, 切换到下一张
+            -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+
+    </div>
+    <div class="close1">
+        <i class="glyphicon glyphicon-remove"></i>
+    </div>
+</div>
+
+<!--数据模板-->
+<script type="text/html" id="couponproductTmp">
+{{each result v i}}
+<li>
+    <a href="#" class="clearfix">
+        <div class="left fl">{{@v.couponProductImg}}</div>
+        <div class="right">
+            <h3>{{v.couponProductName}}</h3>
+            <b>{{v.couponProductPrice}}</b>
+            <p class="time">{{v.couponProductTime}}</p>
+        </div>
+    </a>
+    <i class="fa fa-angle-right gray"></i>
+</li>
+{{/each}}
+</script>
+
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/IScroll/iscroll.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/couponproduct.js"></script>
+</body>
+</html>

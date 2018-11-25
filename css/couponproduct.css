@@ -1,0 +1,81 @@
+.container {
+  padding: 0;
+  margin: 0;
+}
+h3 {
+  font-weight: bold;
+}
+.mm_main {
+  background-color: #fff;
+}
+.mm_main .tips {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+.mm_main ul li {
+  padding: 5px 10px;
+  padding-right: 20px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.mm_main ul li a {
+  display: block;
+}
+.mm_main ul li a .left {
+  width: 100px;
+  height: 100px;
+}
+.mm_main ul li a .right {
+  overflow: hidden;
+  padding-left: 10px;
+  line-height: 30px;
+}
+.mm_main ul li a .right h3 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+}
+.mm_main ul li a .right p {
+  font-size: 12px;
+}
+.mm_main ul li a .right p.time {
+  color: #EE7700;
+  margin-bottom: 5px;
+}
+.mm_main ul li i {
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  bottom: 48%;
+}
+.imgmodal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+.imgmodal .content {
+  width: 300px;
+  height: 200px;
+  margin: 200px auto;
+}
+.imgmodal .content img {
+  width: 200px;
+  margin: 10px;
+  margin: 0 auto;
+}
+.imgmodal .close1 {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 5px;
+  z-index: 9999;
+}
+.imgmodal .close1 i {
+  color: #fff;
+}

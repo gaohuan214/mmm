@@ -1,0 +1,123 @@
+//重置顶部颜色topbar
+.container .mm_head{
+    background-color: #f4483e;
+   h3{
+       margin: 0;
+   }
+}
+.navbar{
+    position: relative;
+    overflow: hidden;
+    ul{
+   
+        background-color: #fff;
+    }
+    li{
+        padding: 0px 12px 10px;
+
+        float: left;
+        a{
+             margin: 0 8px;
+             padding-bottom: 9px;
+            border-bottom: 2px solid transparent;
+            &.current{
+                color: #e4393c;
+            border-bottom: 2px solid #e4393c;
+                
+            }
+        }
+    }
+};
+
+.container .info{
+    background-color: #eee;
+    padding-top: 5px;
+    .item{
+        background-color: #fff;
+        margin-bottom: 5px;
+        border:none;
+        height: auto;
+        height: 150px;
+        div.left{
+            width: 130px;
+            height: 130px;
+        }
+        div.right{
+            height: auto;
+        }
+        .price{
+            color: #e4393c;
+            font-size: 20px;
+            padding: 10px 0;
+            margin: 0;
+            em{
+                font-style: normal;
+                font-size: 12px;
+            }
+            del{
+                font-size: 12px;
+                color: #c6c6c6;
+                margin-left: 10px;
+            }
+        }
+        .down{
+           margin-top: 10px;
+           position: relative;
+          .fl{
+            .bar{
+
+                i{
+                    float: left;
+                    width: 80px;
+                    height: 16px;
+                    background-color: #ffb7b7;
+                    border-radius: 5px;
+                    position: relative;
+                    border: 1px solid #e4393c;
+                    border-left: 2px solid #e4393c;
+                    overflow: hidden;
+
+                    span{
+                        font-size: 12px;
+                        color: #fff;
+                        position: absolute;
+                        left: 44%;
+                        top: -30%;
+                    }
+                }
+
+                b{
+                    float: left;
+                    font-size: 12px;
+                    color: red;
+                    font-weight: normal;
+                    margin-left: 10px;
+                }               
+            }
+
+            >a{
+                border: 1px dashed #fd7477;
+                font-size: 12px;
+                color: #fd7477;
+                text-align: center;
+                margin-top: 5px;
+            }
+          }
+
+          .fr{
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              a{
+                  background-color: #ff5e5d;
+                  border-radius: 5px;
+                  color: #fff;
+                  padding: 5px 2px;
+                  font-size: 12px;
+              }             
+          }
+        }
+    }
+
+   
+}

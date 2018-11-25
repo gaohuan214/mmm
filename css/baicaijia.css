@@ -1,0 +1,107 @@
+.container .mm_head {
+  background-color: #f4483e;
+}
+.container .mm_head h3 {
+  margin: 0;
+}
+.navbar {
+  position: relative;
+  overflow: hidden;
+}
+.navbar ul {
+  background-color: #fff;
+}
+.navbar li {
+  padding: 0px 12px 10px;
+  float: left;
+}
+.navbar li a {
+  margin: 0 8px;
+  padding-bottom: 9px;
+  border-bottom: 2px solid transparent;
+}
+.navbar li a.current {
+  color: #e4393c;
+  border-bottom: 2px solid #e4393c;
+}
+.container .info {
+  background-color: #eee;
+  padding-top: 5px;
+}
+.container .info .item {
+  background-color: #fff;
+  margin-bottom: 5px;
+  border: none;
+  height: auto;
+  height: 150px;
+}
+.container .info .item div.left {
+  width: 130px;
+  height: 130px;
+}
+.container .info .item div.right {
+  height: auto;
+}
+.container .info .item .price {
+  color: #e4393c;
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 0;
+}
+.container .info .item .price em {
+  font-style: normal;
+  font-size: 12px;
+}
+.container .info .item .price del {
+  font-size: 12px;
+  color: #c6c6c6;
+  margin-left: 10px;
+}
+.container .info .item .down {
+  margin-top: 10px;
+  position: relative;
+}
+.container .info .item .down .fl .bar i {
+  float: left;
+  width: 80px;
+  height: 16px;
+  background-color: #ffb7b7;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid #e4393c;
+  border-left: 2px solid #e4393c;
+  overflow: hidden;
+}
+.container .info .item .down .fl .bar i span {
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  left: 44%;
+  top: -30%;
+}
+.container .info .item .down .fl .bar b {
+  float: left;
+  font-size: 12px;
+  color: red;
+  font-weight: normal;
+  margin-left: 10px;
+}
+.container .info .item .down .fl > a {
+  border: 1px dashed #fd7477;
+  font-size: 12px;
+  color: #fd7477;
+  text-align: center;
+  margin-top: 5px;
+}
+.container .info .item .down .fr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.container .info .item .down .fr a {
+  background-color: #ff5e5d;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 2px;
+  font-size: 12px;
+}

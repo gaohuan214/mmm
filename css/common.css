@@ -223,6 +223,14 @@ img {
   display: block;
   width: 100%;
 }
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #000;
+}
+h3 {
+  margin: 0;
+}
 html,
 body {
   width: 100%;
@@ -237,11 +245,11 @@ body {
   background-color: #fff;
 }
 .container .mm_head {
-  height: 50px;
+  height: 44px;
   background-color: #ff841d;
   position: relative;
   text-align: center;
-  line-height: 50px;
+  line-height: 44px;
 }
 .container .mm_head a {
   display: block;
@@ -266,6 +274,7 @@ body {
 .container .mm_head h3 {
   color: #fff;
   font-size: 20px;
+  line-height: 44px;
 }
 .container .mm_head .goback {
   width: 44px;
@@ -338,49 +347,50 @@ body {
 .container .mm_footer .bottom .download a.app {
   color: red;
 }
-.container .title {
+.title {
   height: 35px;
   line-height: 35px;
   width: 100%;
   padding: 0 10px;
   background-image: linear-gradient(to right, #ffab3e 0, #ff960d 100%);
 }
-.container .title h3 {
+.title h3 {
   font-size: 16px;
   color: #fff;
   font-weight: normal;
 }
-.container .title i {
+.title i {
   font-size: 20px;
   line-height: 35px;
   color: #fff;
 }
-.container .gray {
+.gray {
   color: #666;
 }
-.container .hide {
+.hide {
   display: none;
 }
-.container .info .item {
+.info .item {
   padding: 10px 5px;
   border-bottom: 1px solid #ccc;
 }
-.container .info .item a {
+.info .item a {
   display: block;
 }
-.container .info .item div.left {
+.info .item div.left {
   width: 100px;
+  height: 100px;
 }
-.container .info .item div.right {
+.info .item div.right {
   padding-left: 20px;
   overflow: hidden;
   height: 100px;
   position: relative;
 }
-.container .info .item div.right .desc span.price {
+.info .item div.right .desc span.price {
   color: #ff6c00;
 }
-.container .info .item div.right .bottom {
+.info .item div.right .bottom {
   width: 100%;
   position: absolute;
   bottom: 15px;
@@ -388,18 +398,18 @@ body {
   font-size: 12px;
   color: #666;
 }
-.container .info .item div.right .bottom span.right {
+.info .item div.right .bottom span.right {
   position: absolute;
   right: 25px;
 }
-.container .info .item div.right .bottom span.right i {
+.info .item div.right .bottom span.right i {
   margin-right: 2px;
 }
-.container .more {
+.more {
   padding: 0 10px;
   padding-top: 10px;
 }
-.container .more a {
+.more a {
   width: 100%;
   display: block;
   height: 30px;
@@ -409,52 +419,67 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-.container .pagination {
+.pagination {
   height: 46px;
   padding-top: 5px;
   display: flex;
   justify-content: space-around;
 }
-.container .pagination div {
+.pagination div {
   padding: 0 20px;
   line-height: 35px;
   height: 35px;
 }
-.container .pagination div.btn {
+.pagination div.btn {
   background-image: linear-gradient(to bottom, #f1f1f1 0, #cccccc 100%);
   border-radius: 5px;
 }
-.container .pagination div.dropdown {
+.pagination div.dropdown {
   padding-right: 32px;
   border: 1px solid #ccc;
   position: relative;
 }
-.container .pagination div.dropdown ul {
+.pagination div.dropdown ul {
   position: absolute;
   width: 100%;
   left: 0;
   border: 1px solid #ff20007d;
   text-align: center;
 }
-.container .pagination div.dropdown ul li {
+.pagination div.dropdown ul li {
   height: 35px;
   line-height: 35px;
   background-color: #fff;
 }
-.container .pagination div.dropdown ul li.current {
+.pagination div.dropdown ul li.current {
   background-color: skyblue;
 }
-.container .pagination div.dropdown ul.up {
+.pagination div.dropdown ul.up {
   left: 0;
   bottom: 34px;
 }
-.container .pagination div.dropdown i {
+.pagination div.dropdown i {
   position: absolute;
   right: 8px;
   top: 32%;
 }
-.container .mm_content {
+.mm_content {
   margin-top: 5px;
   margin-bottom: 10px;
   background-color: #fff;
+}
+.toTop {
+  position: fixed;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  right: 10px;
+  bottom: 150px;
+  text-align: center;
+}
+.toTop i {
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.5);
 }
