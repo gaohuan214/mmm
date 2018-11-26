@@ -1,0 +1,199 @@
+.title {
+  height: 40px;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #ccc;
+  background-image: linear-gradient(to bottom, #ffffff 0, #ededed 100%);
+}
+.title span {
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  padding: 0 15px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 2px 2px 2px #666;
+  margin-top: 3px;
+}
+.hot {
+  padding: 10px 5px;
+  background-color: #fff;
+}
+.hot h3 {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 8px;
+  color: brown;
+  border: 1px solid #ccc;
+  font-weight: 400;
+  background-color: #eeeeee;
+}
+.cate_main .lists {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 9px;
+  overflow: hidden;
+  background-color: #ededed;
+}
+.cate_main .lists li.item {
+  border-bottom: 1px solid #ccc;
+}
+.cate_main .lists li.item a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+}
+.cate_main .lists li.item a span {
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.cate_main .lists li.item a i {
+  float: right;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 8px;
+  margin-right: 15px;
+  color: #666;
+}
+.cate_main .lists li.item:last-child {
+  border-bottom: none;
+}
+.cate_hot .hot {
+  padding-left: 10px;
+  background-color: #eee;
+  color: brown;
+  line-height: 20px;
+  border-top: 1px solid #999;
+}
+.cate_hot .top10 ul {
+  border-top: 1px solid #999;
+  background-color: #fff;
+}
+.cate_hot .top10 ul li {
+  padding: 10px;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+.cate_hot .top10 ul li a {
+  display: block;
+}
+.cate_hot .top10 ul li a .sort {
+  padding: 0 5px ;
+  color: #fff;
+  left: 0;
+  top: 0;
+  float: left;
+  margin-right: 15px;
+  background-color: #ccc;
+}
+.cate_hot .top10 ul li a .sort.red {
+  background-color: red;
+}
+.cate_hot .top10 ul li a .sort.orange {
+  background-color: orange;
+}
+.cate_hot .top10 ul li a .sort.green {
+  background-color: greenyellow;
+}
+.cate_hot .top10 ul li a .information {
+  overflow: hidden;
+}
+.cate_hot .top10 ul li a .information h3 {
+  font-weight: 500;
+}
+.cate_hot .top10 ul li a .information .num {
+  margin-top: 3px;
+  color: #999;
+}
+.cate_hot .top10 ul li a i {
+  float: right;
+  font-size: 30px;
+  color: #999;
+  margin-top: 10px;
+}
+.cate_hot .info {
+  background-color: #fff;
+}
+.cate_hot .info .price {
+  color: #ea3900;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.cate_hot .info .bottom {
+  color: #f1f1f1;
+}
+.cate_hot .info .bottom .comm {
+  margin-left: 5px;
+}
+.cate_hot .info .item {
+  position: relative;
+}
+.cate_hot .info .item .start {
+  color: orange;
+  position: absolute;
+  right: 5px;
+  top: 48%;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cate_hot .commit ul {
+  padding-bottom: 20px;
+  background-color: #fff;
+}
+.cate_hot .commit li {
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+.cate_hot .commit li .top img {
+  width: 100px;
+  float: left;
+}
+.cate_hot .commit li .top p {
+  color: #666;
+  float: left;
+  margin-left: 10px;
+}
+.cate_hot .commit li .bottom {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  position: relative;
+}
+.cate_hot .commit li .bottom .start {
+  color: orange;
+  right: 5px;
+  top: 48%;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cate_hot .commit li .bottom .time {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ccc;
+}
+.cate_hot .commit li .bottom .text {
+  margin-top: 10px;
+  line-height: 20px;
+}
+.cate_hot .commit li .bottom .sanjiao1 {
+  width: 0;
+  border-right: 9px solid transparent;
+  border-left: 9px solid  transparent;
+  border-bottom: 10px solid #f8f8f8;
+  position: absolute;
+  top: -10px;
+  left: 46px;
+  z-index: 9999;
+}
+.cate_hot .commit li .bottom .sanjiao2 {
+  width: 0;
+  border-right: 12px solid #fff;
+  border-left: 12px solid  #fff;
+  border-bottom: 12px solid #eee;
+  position: absolute;
+  top: -12px;
+  left: 43px;
+}

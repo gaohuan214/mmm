@@ -8,7 +8,7 @@ var total
 
  renderByPage( 0 );
 //封装渲染信息部分
- function renderByPage( currentPage, flag ){
+ function renderByPage( currentPage ){
     //列表信息部分
     $.ajax({
         type: 'get',
@@ -24,9 +24,6 @@ var total
 
             /* -----分页部分------*/
             //获取总页数
-            if (flag) {
-                return;
-            }
             total = Math.ceil( info.totalCount/info.pagesize);
             // console.log(total);
             
@@ -52,11 +49,23 @@ var total
             //渲染下拉列表数据     
            $('.pagination ul').html( str );
 
-            select();
-            // 点击下一页,重新渲染下一页
-             next();
-            // 点击上一页,重新渲染上一页
-              prev();
+            // // 点击下一页,重新渲染下一页
+            // $('.btn-prev').click(function(){
+            //     if(currentPage <= 0 ){
+            //         return;
+            //     }
+            //     currentPage --;
+            //     renderByPage(currentPage);
+            // })
+            // // 点击上一页,重新渲染上一页
+            // $('.btn-next').click(function(){
+            //     // console.log(currentPage);
+            //     if(currentPage>=total-1){
+            //         return;
+            //     }
+            //     currentPage ++;
+            //     renderByPage(currentPage);
+            // });
 
              // 动态设置页码
              if(total){
@@ -69,26 +78,24 @@ var total
 }
 
 //点击页码显示区域切换显示下拉列表
-function select(){
-    $('.pagination .page').click(function(){
-        console.log('page')
-        $('.pagination .dropdown ul').slideToggle();
-        //点击下拉列表中每一项,动态赋值给页面显示区域,隐藏下拉框
-        $('.pagination .dropdown ul').on('click','li',function(){
-            console.log('li')
-            var txt = $('this').text();
-            var index = $(this).index();
-            $('.pagination .dropdown ul').slideToggle();
-            renderByPage( index ,'no');
-            $('.pagination .page').text(txt);
-            //同步页码
-            currentPage = index;
-        })
-    })
-}
+$('.pagination .page').click(function(){
+    $('.pagination .dropdown ul').stop().slideToggle();
+
+});
+//点击下拉列表中每一项,动态赋值给页面显示区域,隐藏下拉框
+$('.pagination .dropdown ul').on('click','li',function(){
+    var txt = $('this').text();
+    var index = $(this).index();
+    renderByPage( index );
+    $('.pagination .page').text(txt);
+    $('.pagination .dropdown ul').hide();
+
+    //同步页码
+    currentPage = index;
+});
 
 //下一页
-function next(){
+// function next(){
     $('.btn-prev').click(function(){
         if(currentPage <= 0 ){
             return;
@@ -96,9 +103,9 @@ function next(){
         currentPage --;
         renderByPage(currentPage);
     })
-}
+// }
 //上一页
-function prev(){
+// function prev(){
     $('.btn-next').click(function(){
         console.log(currentPage);
         if(currentPage>=total-1){
@@ -107,7 +114,7 @@ function prev(){
         currentPage ++;
         renderByPage(currentPage);
     });
-}
+// }
 
 
 

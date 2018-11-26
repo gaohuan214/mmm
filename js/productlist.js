@@ -47,7 +47,7 @@ var pageid;
             var str = ""
             if(total){   
                 for(i=1; i <= total;i++){
-                    if(i==1){
+                    if(i==pageid){
                         str += ' <li class="current">'+i+'/'+total+'</li>';
                        
                     }else{
@@ -91,6 +91,7 @@ var pageid;
         }
     })
 }
+
 //点击页码显示区域切换显示下拉列表
 $('.pagination .page').click(function(){
     $('.pagination .dropdown ul').slideToggle();

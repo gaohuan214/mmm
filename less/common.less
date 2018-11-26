@@ -4,10 +4,19 @@
 @import 'base';
 
 //重置样式
+a,
 a:hover,
-a:focus{
+a:visited,
+a:link,
+a:focus
+{
   text-decoration: none;
   color: #000;
+  //取消a标签在移动端点击时的蓝色
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
 }
 h3{
   margin: 0;
@@ -25,7 +34,6 @@ html, body {
   max-width: 750px;
   min-width: 375px;
   margin: 0 auto;
-  background-color: #fff;
 
   //头部
   .mm_head {
@@ -255,6 +263,7 @@ html, body {
               border: 1px solid #ccc;
               position: relative;
               ul{
+                display: none;
                   position: absolute;
                   width: 100%;
                   left: 0;
@@ -292,7 +301,6 @@ html, body {
 //返回顶部
 .toTop{
   position: fixed;
-  display: block;
   width: 40px;
   height: 40px;
   border-radius: 50%;

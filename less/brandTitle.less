@@ -1,0 +1,234 @@
+.title {
+  height: 40px;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #ccc;
+  background-image: linear-gradient(to bottom, #fff 0, #ededed 100%);
+  span {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 2px 2px 2px #666;
+    margin-top: 3px;
+  }
+}
+.hot{
+  padding: 10px 5px;
+  background-color: #fff;
+  h3{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 8px;
+    color: brown;
+    border: 1px solid #ccc;
+    font-weight: 400;
+    background-color: #eeeeee;
+  }
+}
+.cate_main{
+  .lists{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 9px;
+    overflow: hidden;
+    background-color: #ededed;
+    li.item{
+      border-bottom: 1px solid #ccc;
+      a{
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        span{
+          padding-left: 15px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        i{
+          float: right;
+          font-size: 25px;
+          font-weight: 700;
+          margin-top: 8px;
+          margin-right: 15px;
+          color: #666;
+        }
+      }
+      &:last-child{
+        border-bottom: none;
+      }
+
+    }
+  }
+}
+
+.cate_hot{
+  //热门提示信息
+  .hot{
+    padding-left: 10px;
+    background-color: #eee;
+    color: brown;
+    line-height: 20px;
+    border-top: 1px solid #999;
+
+  }
+
+  //排行前十的信息展示
+  .top10{
+
+    ul{
+      border-top: 1px solid #999;
+      background-color: #fff;
+      li{
+        padding: 10px;
+        position: relative;
+        border-bottom: 1px solid #eee;
+        a{
+          display: block;
+
+          .sort{
+            padding: 0 5px ;
+            color: #fff;
+            left: 0;
+            top: 0;
+            float: left;
+            margin-right: 15px;
+            background-color: #ccc;
+            &.red{
+              background-color: red;
+            }
+            &.orange{
+              background-color: orange;
+            }
+            &.green{
+              background-color: greenyellow;
+            }
+
+          }
+          .information{
+            overflow: hidden;
+            h3{
+              font-weight: 500;
+            }
+            .num{
+              margin-top: 3px;
+              color: #999;
+            }
+          }
+          i{
+            float: right;
+            font-size: 30px;
+            color: #999;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  //平板电视产品销量排行
+  .info{
+    background-color: #fff;
+    .price{
+      color: #ea3900;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .bottom{
+      color: #f1f1f1;
+      .comm{
+        margin-left: 5px;
+      }
+    }
+
+    .item{
+      position: relative;
+      .start{
+        color:orange;
+        position: absolute;
+        right: 5px;
+        top: 48%;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  //平板电视最新评论
+  .commit{
+
+    ul{
+      padding-bottom: 20px;
+      background-color: #fff;
+
+    }
+    li{
+      padding: 10px;
+      border-top: 1px solid #eee;
+      .top{
+        img{
+          width: 100px;
+          float: left;
+        }
+        p{
+          color: #666;
+          float: left;
+          margin-left: 10px;
+
+        }
+
+      }
+
+      .bottom{
+        border: 1px solid #eee;
+        border-radius: 5px;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f8f8f8;
+        position: relative;
+
+        .start{
+          color:orange;
+          right: 5px;
+          top: 48%;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .time{
+          font-size: 12px;
+          font-weight: 600;
+          color: #ccc;
+        }
+        .text{
+          margin-top: 10px;
+          line-height: 20px;
+        }
+
+        .sanjiao1{
+            width: 0;
+           border-right: 9px solid transparent;
+           border-left: 9px solid  transparent;
+           border-bottom: 10px solid #f8f8f8;
+           position: absolute;
+           top: -10px;
+           left: 46px;
+          z-index: 9999;
+        }
+        .sanjiao2{
+          width: 0;
+          border-right: 12px solid #fff;
+          border-left: 12px solid  #fff;
+          border-bottom: 12px solid #eee;
+          position: absolute;
+          top: -12px;
+          left: 43px;
+        }
+
+      }
+    }
+
+  }
+
+}
